@@ -4,8 +4,8 @@
   "description": "A Firebase-Style Database ... Offline!",
   "main": "index.js",
   "scripts": {
-    "bundle-dev": "browserify --standalone Localbase index.js -t babelify -t [ envify --NODE_ENV development ] > dist/localbase.dev.js",
-    "bundle-prod": "browserify -p [ tinyify --no-flat ] --standalone Localbase index.js -t babelify -t [ envify --NODE_ENV production ] > dist/localbase.min.js",
+    "bundle-dev": "npx --yes browserify --standalone localbase index.js -t babelify -t [ envify --NODE_ENV development ] > dist/localbase.dev.js",
+    "bundle-prod": "npx --yes browserify -p [ tinyify --no-flat ] --standalone localbase index.js -t babelify -t [ envify --NODE_ENV production ] > dist/localbase.min.js",
     "bundle": "npm run bundle-dev && npm run bundle-prod",
     "deploy": "npm run bundle && npm publish"
   },
